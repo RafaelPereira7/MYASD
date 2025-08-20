@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GPA Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <h1>GPA Calculator</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">GPA Calculator</a>
+      <a href="activities.html">School Activities</a>
+      <a href="falcon.html">Falcon Futures</a>
+      <button id="reset-data-btn" class="icon-btn" style="display:none;" title="Reset all data">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="card gpa-card gpa-flex-layout">
+      <div class="gpa-left">
+        <div class="gpa-header-row">
+          <h2>GPA Calculator</h2>
+        </div>
+        <div id="toast-container"></div>
+        <div id="empty-state" class="empty-state" style="display:none">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:8px;"><rect x="6" y="10" width="36" height="28" rx="4" fill="#F4F4FB" stroke="#B11E27" stroke-width="2"/><rect x="14" y="18" width="20" height="4" rx="2" fill="#B11E27" fill-opacity="0.2"/><rect x="14" y="26" width="12" height="4" rx="2" fill="#B11E27" fill-opacity="0.2"/></svg>
+          <span style="font-size:1.5rem;color:#888;vertical-align:middle;">No classes</span>
+        </div>
+        <div id="class-list"></div>
+        <div class="gpa-bottom-row">
+          <div id="gpa-output" class="gpa-display">GPA: N/A</div>
+          <button id="add-class-btn" class="add-class-btn btn-outline"><span class="plus-icon">＋</span> Add Class</button>
+          <button class="csv-btn btn-outline" id="csvBtn" title="Export as CSV">📄 CSV Export</button>
+        </div>
+      </div>
+      <div class="gpa-right">
+      </div>
+    </section>
+  </main>
+  <div id="help-modal" class="modal" style="display:none">
+    <div class="modal-content">
+      <span class="close-modal" id="closeHelpModal">&times;</span>
+      <h3>How is GPA calculated?</h3>
+      <ul>
+        <li>Each class has a grade (A+, A, etc.), and can be marked as AP (+0.25 GPA) or Semester (0.5 credit).</li>
+        <li>GPA = (Sum of (grade points × credits)) / (Total credits).</li>
+        <li>All your data is saved in your browser for privacy.</li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="social-icons">
+      <a href="#"><img src="avatar1.png" alt="Social 1" /></a>
+      <a href="#"><img src="avatar2.png" alt="Social 2" /></a>
+    </div>
+  </footer>
+  <script src="gpa.js"></script>
+</body>
+</html>

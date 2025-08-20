@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Activities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2, h3, h4 {
+      color: #B11E27;
+    }
+    nav a {
+      margin-right: 10px;
+      color: #B11E27;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    /* Modern Tabs */
+    .tab-bar {
+      display: flex;
+      background: #f7f7fa;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+      padding: 4px;
+      width: fit-content;
+    }
+    .tab-button {
+      background: none;
+      color: #B11E27;
+      border: none;
+      padding: 10px 32px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      margin: 0 2px;
+    }
+    .tab-button.active {
+      background: #B11E27;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(177,30,39,0.08);
+    }
+    .tab-content {
+      display: none;
+      margin-top: 0;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    /* Modern Accordion */
+    .accordion-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+    }
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: #f7f7fa;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background 0.2s;
+    }
+    .accordion-header:hover {
+      background: #ececf3;
+    }
+    .accordion-chevron {
+      transition: transform 0.3s;
+      font-size: 1.2em;
+      color: #B11E27;
+    }
+    .accordion-header.active .accordion-chevron {
+      transform: rotate(90deg);
+    }
+    .accordion-content {
+      padding: 20px 24px 16px 24px;
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+    .accordion-content.active {
+      display: block;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 24px;
+      color: #B11E27;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>School Activities</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">GPA Calculator</a>
+      <a href="activities.html">School Activities</a>
+      <a href="falcon.html">Falcon Futures</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2><i class="fas fa-users"></i> School Activities</h2>
+    <p>Discover ways to get involved through clubs and organizations at ASD. This page highlights meaningful volunteering opportunities that give you service hours, build and showcase leadership, and strengthen our community.</p>
+
+    <h3><i class="fas fa-hands-helping"></i> Why Get Involved</h3>
+    <p>Participating can also show college admission officers if you're a leader, someone who takes initiative, and is passionate for the things you do. If you participate in even just a few clubs, take internships, or lead activities, you help build a picture of who you are. These experiences give you examples of what to write about in essays, can help your teachers write their letters of rec, and allow you to represent our school.</p>
+
+    <div class="tab-bar">
+      <button class="tab-button active" onclick="openTab('organizations', this)"><i class="fas fa-university"></i> Organizations</button>
+      <button class="tab-button" onclick="openTab('clubs', this)"><i class="fas fa-chalkboard-teacher"></i> Clubs</button>
+    </div>
+
+    <!-- Organizations -->
+
+
+
+<div id = "organizations" class = "tab-content">
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Library Advisory Council
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> The Library Advisory Council increases the use of library resources and gains input from the ASD community on the re-imagining of the library.</p>
+      <p><strong>Meetings:</strong> THURSDAY lunch</p>
+    </div>
+</div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Mu Alpha Theta
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Builds a community of mathematics enthusiasts that consolidates and demonstrates the importance of mathematics in all aspects of life and addresses the demands and needs of the community by establishing meaningful and engaging mathematical experiences.</p>
+      <p><strong>Meetings:</strong> MONDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Medical Society (MedSoc)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Strives to spread awareness throughout the ASD community about medical issues while providing opportunities for students interested in the medical field to gain experience.</p>
+      <p><strong>Meetings:</strong> THURSDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      National Honor Society (NHS)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Create enthusiasm for scholarship, stimulate a desire to render service, promote worthy leadership, and encourage the development of character in students of ASD.</p>
+      <p><strong>Meetings:</strong> TUESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Thespian Society
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Promote and strengthen theater by recognizing and rewarding excellence; use theater as an instrument of lifelong learning.</p>
+      <p><strong>Meetings:</strong> TBD</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Tri-M Music Honor Society
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Recognize students for academic and musical achievements, reward accomplishments and service activities, and inspire others to excel at music.</p>
+      <p><strong>Meetings:</strong> MONDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Falcon Ambassadors
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Foster a culture of support and engagement in the school community; serve as positive role models and assist new students.</p>
+      <p><strong>Meetings:</strong> Varies</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Student Athlete Leadership Team (SALT)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Encourage athletic and academic excellence, good citizenship, sportsmanship, moral character, and competition.</p>
+      <p><strong>Meetings:</strong> Varies</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Student Government Association (SGA)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Represent the ideas and opinions of all ASD members to create a community of support, collaboration, and spirit.</p>
+      <p><strong>Meetings:</strong> WEDNESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Animal Advocacy Club
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Create a forum for those interested in animal rights to gather, share ideas, and contribute skills to improve animal lives.</p>
+      <p><strong>Meetings:</strong> TUESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Art for Life
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Build a community of artists to share and appreciate work, encourage learning new media, and enliven ASD hallways.</p>
+      <p><strong>Meetings:</strong> THURSDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      The Bliss Project
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Promote a positive, friendly, and stress-free environment and provide experience for aspiring psychologists.</p>
+      <p><strong>Meetings:</strong> WEDNESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Empowering Girls Globally
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Advocate for equitable rights and opportunities for girls and women in the UAE and beyond, promoting gender equity.</p>
+      <p><strong>Meetings:</strong> TUESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Global Issues Network (GIN)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Empower young people to collaborate locally, regionally, and globally to create sustainable solutions for global issues.</p>
+      <p><strong>Meetings:</strong> THURSDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      High Tide
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Raise awareness and initiate change regarding environmental marine life issues worldwide.</p>
+      <p><strong>Meetings:</strong> WEDNESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Innovation for Change
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Inspire, educate, and facilitate ASD students in STEM-related innovation that can create meaningful community change.</p>
+      <p><strong>Meetings:</strong> TUESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Room to Read (R2R)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Promote, advocate, and support education in developing countries. (tentative)</p>
+      <p><strong>Meetings:</strong> MONDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      SEENAH
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Support underprivileged communities locally and globally toward sustainability through economics, education, nutrition, and health by engaging the ASD community.</p>
+      <p><strong>Meetings:</strong> MONDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      SHINE / Best Buddies
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Educate and inspire ASD students to positively impact ASD and special needs kids in Dubai through one-to-one friendships within Best Buddies.</p>
+      <p><strong>Meetings:</strong> WEDNESDAY lunch</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Sustain Our World (SOW)
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Inspire the ASD community to live sustainably by promoting organic farming, healthy eating, and sustainability education.</p>
+      <p><strong>Meetings:</strong> MONDAY @ 3:30 pm</p>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      Undivided
+      <span class="accordion-chevron">&#8250;</span>
+    </div>
+    <div class="accordion-content">
+      <p><strong>Mission:</strong> Recognize diversity and make people feel included in the ASD community.</p>
+      <p><strong>Meetings:</strong> TUESDAY lunch</p>
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+<div id="clubs" class="tab-content">
+  <div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    ASD Business Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> The ASD Business Club strives to teach its members about multiple aspects of business and entrepreneurship through first-hand experience, whilst allowing them to contribute to the global community.</p>
+    <p><strong>Meetings:</strong> Thursday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    ASD Entrepreneurship Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> The ASD entrepreneurship club seeks to build a stronger community by inspiring, motivating and developing young entrepreneurial minds via the practical experience of launching an independent business that solves complex problems that leads to positive social change.</p>
+    <p><strong>Meetings:</strong> Wednesday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Build It!
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> Build It! is dedicated to promoting engineering, creativity, and compassion through LEGO creation and engineering in our high school. We strive to provide an inclusive and engaging environment where students can explore the exciting world of robotics, develop their problem-solving skills, and foster their passion for innovation.</p>
+    <p><strong>Meetings:</strong> TBD</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Business Networking Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> The Business Networking Club aims to empower youth in business by supporting them in gaining a profound understanding of the business world through various mentorships and immersive real-world experiences guided by industry experts.</p>
+    <p><strong>Meetings:</strong> Monday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Cancel Period Poverty
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> Cancel Period Poverty is dedicated to advocating about period poverty and the detrimental effects it has on the quality of life of many women worldwide. The organization works together to educate, and create long term sustainable solutions.</p>
+    <p><strong>Meetings:</strong> Monday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Economics Debate Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> To provide our members with the knowledge, skills, and confidence they need to participate in global economic debates as informed, responsible, and influential participants by developing a greater understanding of global economic issues through debatable podcasts.</p>
+    <p><strong>Meetings:</strong> Wednesday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Falcon Talks
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> To give our community the voice to speak about their passions.</p>
+    <p><strong>Meetings:</strong> Thursday @ 3:30 pm</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Lunchbox Theater
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> Lunchbox theater is a place where students can showcase their talents to their peers or simply enjoy lunch and watch an array of music, poetry, acting and dance performances.</p>
+    <p><strong>Meetings:</strong> Last Tuesday of each month, lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Math Support Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> The Math Support Club is an initiative that helps individuals struggling from the challenging content that math offers. Through collaboration and hard work, our initiative helps deepen mathematical understanding that an individual obtains, which is useful in the long run.</p>
+    <p><strong>Meetings:</strong> Thursday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Psychology Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> From hosting a variety of activities like watching movies related to psychological concepts, advocating for mental illnesses, creating awareness within the ASD community, to giving students a platform to voice their own HS struggles through a podcast, the Psych Club strives to build a community for psychology enthusiasts to meet, discuss, and learn, in an optimistic environment.</p>
+    <p><strong>Meetings:</strong> Wednesday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Research Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> The Research club aims to give students research opportunities in which their work is published and refined to improve their research skills and give them practice for its real life applications in university and beyond. Students are given the chance to deeply learn about the topics that they are truly passionate about while building teamwork skills with others who are also interested in these topics. Additionally, they are able to present their knowledge and research about their favorite topics in a variety of ways through their own chosen media.</p>
+    <p><strong>Meetings:</strong> Monday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Science Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> The mission of our high school science club is to cultivate a profound appreciation for science among our members. We are committed to providing an inclusive and engaging platform where students can actively participate in scientific exploration regardless of their prior knowledge or age. We aim to foster a deeper understanding of scientific concepts and their real-world applications through hands-on experiments, thought-provoking discussions, and collaborative learning. Our objective is to inspire a new generation of critical thinkers and problem solvers who are well-prepared to excel in both their academic pursuits and future careers in science and technology.</p>
+    <p><strong>Meetings:</strong> Tuesday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Social Media Marketing Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> Our mission is to provide ASD students with a diverse perspective on marketing and how social media has a major impact on promoting, with a focus on developing lifelong skills.</p>
+    <p><strong>Meetings:</strong> Wednesday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Sports Marketing Club
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> Sports Marketing at ASD strives to educate our student body about how organizations in the sports industry manage sponsorships, brand deals, and marketing strategies as well as highlighting issues that coherently damage the structure of a business in the sports industry such as gender pay gap or corruption.</p>
+    <p><strong>Meetings:</strong> Monday lunch</p>
+  </div>
+</div>
+
+<div class="accordion-card">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Up-and-Coming Artists (UCA)
+    <span class="accordion-chevron">&#8250;</span>
+  </div>
+  <div class="accordion-content">
+    <p><strong>Mission:</strong> This club allows up-and-coming artists to share their work and receive feedback. This is a great way to meet creative people and investigate careers in musical fields.</p>
+    <p><strong>Meetings:</strong> Monday lunch</p>
+  </div>
+</div>
+
+
+    
+  </div>
+
+
+  <!-- fix  -->
+  <div id = "sports" class = "tab-content">
+
+      <div class = "accordion-card">
+        <div class = "accordion-header onClick="toggleAccordion(this)" >
+        Swim Team
+        <span class="accordion-chevron">&#8250;</span>
+        </div>
+      <div class = "accordion-content">
+        <p><strong>This si about</strong></p>
+        <p><strong>ksjfklsj </strong></p>
+      </div>
+
+
+
+      </div>
+
+
+  </div>
+
+  </main>
+
+  <footer style="margin-top: 40px;">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+      <a href="#"><i class="fab fa-instagram-square"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function openTab(tabName, btn) {
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabName).classList.add('active');
+    }
+
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+      document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'));
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+      if (!isActive) {
+        header.classList.add('active');
+        content.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
